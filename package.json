@@ -10,11 +10,11 @@
   },
   "scripts": {
     "start": "electron .",
-    "preinstall": "if [ -f quixe/LICENSE ]; then echo Quixe already installed; elif [ -d .git ]; then git submodule init; git submodule update; else git clone https://github.com/erkyrath/quixe.git; fi"
+    "preinstall": "if [ -f quixe/LICENSE ]; then echo Quixe already installed; elif [ -d .git ]; then git submodule init; git submodule update; else git clone https://github.com/durafen/quixe.git; fi"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/erkyrath/lectrote.git"
+    "url": "https://github.com/durafen/lectrote.git"
   },
   "keywords": [
     "interactive fiction",
