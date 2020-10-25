@@ -143,11 +143,13 @@ function set_color_theme(obj)
     bodyel.removeClass('SepiaTheme');
     bodyel.removeClass('SlateTheme');
     bodyel.removeClass('DarkTheme');
+    bodyel.removeClass('CustomTheme');
 
     if (search_body_el) {
         search_body_el.removeClass('SepiaTheme');
         search_body_el.removeClass('SlateTheme');
         search_body_el.removeClass('DarkTheme');
+        search_body_el.removeClass('CustomTheme');
     }
 
     switch (val) {
@@ -170,6 +172,12 @@ function set_color_theme(obj)
             search_body_el.addClass('DarkTheme');
         break;
 
+    case 'custom':
+        bodyel.addClass('CustomTheme');
+        if (search_body_el)
+            search_body_el.addClass('CustomTheme');
+        break;
+    
     default:
         /* Light theme is the default. */
         break;
@@ -237,6 +245,12 @@ input {
   color: white;
   border: 1px solid #555;
 }
+.CustomTheme input {
+    background: white;
+    color: black;
+    border: 1px solid #BBB;
+}
+  
 
 button {
   -webkit-appearance: none;
@@ -264,7 +278,12 @@ button {
   border: 1px solid #666;
   color: white;
 }
-`;
+.CustomTheme button {
+    background: #C0C0C0;
+    border: 1px solid #AAA;
+    color: black;
+}
+  `;
 
 function construct_searchbar()
 {

@@ -34,6 +34,11 @@
   background: #303010;
   -webkit-box-shadow: inset 0 0 4px rgba(255,255,255,0.2);
 }
+.CustomTheme ::-webkit-scrollbar-thumb {
+  background: #E4E4D8;
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
 
 ::-webkit-scrollbar-track:hover {
   background: #F8F8F0;
@@ -48,6 +53,9 @@
 .DarkTheme ::-webkit-scrollbar-track:hover {
   background: #202010;
 }
+.CustomTheme ::-webkit-scrollbar-track:hover {
+  background: #525262;
+}
 
 body.SepiaTheme {
   background: #F4EDE1;
@@ -58,6 +66,9 @@ body.SlateTheme {
 body.DarkTheme {
   background: black;
 }
+body.CustomTheme {
+  background: #F4EDE1;
+}
 
 .SepiaTheme #content {
   background: #F4EDE1;
@@ -67,6 +78,9 @@ body.DarkTheme {
 }
 .DarkTheme #content {
   background: black;
+}
+.CustomTheme #content {
+  background: #F4EDE1;
 }
 
 #windowport {
@@ -130,6 +144,10 @@ body.DarkTheme {
   background: black;
   color: #FFF4EE;
 }
+.CustomTheme .WindowFrame {
+  background: #F4EDE1;
+  color: black;
+}
 
 .BufferWindow {
   overflow: scroll;   /* vertical scrollbar is mandatory */
@@ -164,6 +182,10 @@ body.DarkTheme {
 .DarkTheme .GridWindow {
   background: #432;
   color: #DDDACC;
+}
+.CustomTheme .GridWindow {
+  background: #FFFFF4;
+  color: #864;
 }
 
 .GridLine {
@@ -217,6 +239,10 @@ body.DarkTheme {
   background: #FDA;
   color: #420;
 }
+.CustomTheme .MorePrompt {
+  background: #603010;
+  color: #FFFFCC;
+}
 
 .PreviousMark {
   /* This describes the small horizontal mark that appears in a window
@@ -250,6 +276,9 @@ body.DarkTheme {
 }
 .DarkTheme .Input {
   color: #CFC;
+}
+.CustomTheme .Input {
+  color: #040;
 }
 
 .BufferWindow .Input {
@@ -308,6 +337,9 @@ a {
 .DarkTheme a {
   color: #AAF;
 }
+.CustomTheme a {
+  color: #00E;
+}
 
 /* The following are the standard Glk styles. */
 
@@ -359,6 +391,9 @@ a {
 .DarkTheme .Style_blockquote {
   background: #404010;
 }
+.CustomTheme .Style_blockquote {
+  background: #E4DDC0;
+}
 
 .Style_input {
   font-weight: bold;
@@ -373,6 +408,9 @@ a {
 }
 .DarkTheme .Style_input {
   color: #CFC;
+}
+.CustomTheme .Style_input {
+  color: #040;
 }
 
 .Style_user1 {

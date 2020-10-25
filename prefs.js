@@ -139,7 +139,8 @@ var themelist = [
     { key:'light', label:'Light' },
     { key:'sepia', label:'Sepia' },
     { key:'slate', label:'Slate' },
-    { key:'dark', label:'Dark' }
+    { key:'dark', label:'Dark' },
+    { key:'custom', label:'Custom' }
 ];
 
 function apply_color_theme(val)
@@ -157,6 +158,7 @@ function apply_color_theme(val)
     bodyel.removeClass('SepiaTheme');
     bodyel.removeClass('SlateTheme');
     bodyel.removeClass('DarkTheme');
+    bodyel.removeClass('CustomTheme');
 
     switch (val) {
 
@@ -171,6 +173,11 @@ function apply_color_theme(val)
     case 'dark':
         bodyel.addClass('DarkTheme');
         break;
+    
+    case 'custom':
+        bodyel.addClass('CustomTheme');
+        break;
+
 
     default:
         /* Light theme is the default. */
