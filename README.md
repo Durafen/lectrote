@@ -1,6 +1,16 @@
 # Lectrote
 <img style="float:right;" src="icon-128.png" alt="Lectrote logo: purple compass">
 
+### Fork Notes ###
+- auto competition with tab and shift tab.
+- History search with shift up and shift down.
+
+- [Download the latest Lectrote app with auto-competition][fork_releases]
+
+[fork_releases]: https://github.com/Durafen/lectrote/releases
+
+&nbsp;
+
 ### The IF interpreter in an [Electron][] shell
 
 - Version 1.3.8
