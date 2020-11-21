@@ -1,0 +1,3 @@
+[submodule "quixe"]
+	path = quixe
+	url = https://github.com/durafen/quixe.git
