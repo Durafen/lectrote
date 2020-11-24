@@ -34,6 +34,11 @@
   background: #303010;
   -webkit-box-shadow: inset 0 0 4px rgba(255,255,255,0.2);
 }
+.DarkTheme2 ::-webkit-scrollbar-thumb {
+  background: #303010;
+  -webkit-box-shadow: inset 0 0 4px rgba(255,255,255,0.2);
+}
+
 .CustomTheme ::-webkit-scrollbar-thumb {
   background: #E4E4D8;
   -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
@@ -53,6 +58,9 @@
 .DarkTheme ::-webkit-scrollbar-track:hover {
   background: #202010;
 }
+.DarkTheme2 ::-webkit-scrollbar-track:hover {
+  background: #202010;
+}
 .CustomTheme ::-webkit-scrollbar-track:hover {
   background: #525262;
 }
@@ -66,6 +74,9 @@ body.SlateTheme {
 body.DarkTheme {
   background: black;
 }
+body.DarkTheme2 {
+  background: black;
+}
 body.CustomTheme {
   background: #F4EDE1;
 }
@@ -77,6 +88,9 @@ body.CustomTheme {
   background: #4D4D4F;
 }
 .DarkTheme #content {
+  background: black;
+}
+.DarkTheme2 #content {
   background: black;
 }
 .CustomTheme #content {
@@ -144,6 +158,10 @@ body.CustomTheme {
   background: black;
   color: #FFF4EE;
 }
+.DarkTheme2 .WindowFrame {
+  background: black;
+  color: #C8C8C8;
+}
 .CustomTheme .WindowFrame {
   background: #F4EDE1;
   color: black;
@@ -180,6 +198,10 @@ body.CustomTheme {
   color: #DDDDEE;
 }
 .DarkTheme .GridWindow {
+  background: #432;
+  color: #DDDACC;
+}
+.DarkTheme2 .GridWindow {
   background: #432;
   color: #DDDACC;
 }
@@ -239,6 +261,10 @@ body.CustomTheme {
   background: #FDA;
   color: #420;
 }
+.DarkTheme2 .MorePrompt {
+  background: #FDA;
+  color: #420;
+}
 .CustomTheme .MorePrompt {
   background: #603010;
   color: #FFFFCC;
@@ -275,6 +301,9 @@ body.CustomTheme {
   color: #DFD;
 }
 .DarkTheme .Input {
+  color: #CFC;
+}
+.DarkTheme2 .Input {
   color: #CFC;
 }
 .CustomTheme .Input {
@@ -337,6 +366,9 @@ a {
 .DarkTheme a {
   color: #AAF;
 }
+.DarkTheme2 a {
+  color: #AAF;
+}
 .CustomTheme a {
   color: #00E;
 }
@@ -391,6 +423,9 @@ a {
 .DarkTheme .Style_blockquote {
   background: #404010;
 }
+.DarkTheme2 .Style_blockquote {
+  background: #404010;
+}
 .CustomTheme .Style_blockquote {
   background: #E4DDC0;
 }
@@ -407,6 +442,9 @@ a {
   color: #DFD;
 }
 .DarkTheme .Style_input {
+  color: #CFC;
+}
+.DarkTheme2 .Style_input {
   color: #CFC;
 }
 .CustomTheme .Style_input {

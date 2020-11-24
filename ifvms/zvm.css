@@ -67,6 +67,24 @@ http://docs.google.com/spreadsheets/d/1Nvwyb_twC3_fPYDrjQu86b3KRAmLFDllIUvPUpMz1
 	--reverse-fg-color: black;
 	--grid-pad-color: #282018;
 }
+.DarkTheme2 {
+	--main-bg-color: black;
+	--main-fg-color: #C8C8C8;
+	--grid-bg-color: #432;
+	--grid-fg-color: #DDDACC;
+	--reverse-bg-color: #AA9;
+	--reverse-fg-color: black;
+	--grid-pad-color: #282018;
+}
+.CustomTheme {
+	--main-bg-color: #F4EDE1;
+	--main-fg-color: black;
+	--grid-bg-color: #FFFFF4;
+	--grid-fg-color: #864;
+	--reverse-bg-color: #887;
+	--reverse-fg-color: white;
+	--grid-pad-color: #F4F0E4;
+}
 
 /* Clear some default GlkOte styles */
 .BufferWindow .Style_header, .BufferWindow .Style_preformatted

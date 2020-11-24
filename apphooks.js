@@ -143,12 +143,14 @@ function set_color_theme(obj)
     bodyel.removeClass('SepiaTheme');
     bodyel.removeClass('SlateTheme');
     bodyel.removeClass('DarkTheme');
+    bodyel.removeClass('DarkTheme2');
     bodyel.removeClass('CustomTheme');
 
     if (search_body_el) {
         search_body_el.removeClass('SepiaTheme');
         search_body_el.removeClass('SlateTheme');
         search_body_el.removeClass('DarkTheme');
+        search_body_el.removeClass('DarkTheme2');
         search_body_el.removeClass('CustomTheme');
     }
 
@@ -170,6 +172,12 @@ function set_color_theme(obj)
         bodyel.addClass('DarkTheme');
         if (search_body_el)
             search_body_el.addClass('DarkTheme');
+        break;
+
+    case 'dark2':
+        bodyel.addClass('DarkTheme2');
+        if (search_body_el)
+            search_body_el.addClass('DarkTheme2');
         break;
 
     case 'custom':
@@ -245,6 +253,11 @@ input {
   color: white;
   border: 1px solid #555;
 }
+.DarkTheme2 input {
+  background: black;
+  color: white;
+  border: 1px solid #555;
+}
 .CustomTheme input {
     background: white;
     color: black;
@@ -274,6 +287,11 @@ button {
   color: white;
 }
 .DarkTheme button {
+  background: #505050;
+  border: 1px solid #666;
+  color: white;
+}
+.DarkTheme2 button {
   background: #505050;
   border: 1px solid #666;
   color: white;
