@@ -13,7 +13,7 @@
 
 ### The IF interpreter in an [Electron][] shell
 
-- Version 1.3.9
+- Version 1.3.10
 - Created by Andrew Plotkin <erkyrath@eblong.com>
 - [Download the latest Lectrote app][releases]
 
@@ -41,6 +41,8 @@ Lectrote currently supports:
 [Z-code]: http://inform-fiction.org/zmachine/standards/z1point1
 
 You can also use this package to construct a "bound game" -- an app which plays a single built-in game. This is a package containing Chromium, the interpreter, your game file, and perhaps some additional configuration. You can distribute this as a standalone game application; it's bulky but it lets people play your game.
+
+Linux note: Depending on your Linux configuration and how you install this package, you may have to add the `--no-sandbox` option when launching Lectrote.
 
 ## Glulx (Inform 7) support
 

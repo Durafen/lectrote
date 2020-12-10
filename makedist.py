@@ -16,7 +16,7 @@ import subprocess
 
 all_packages = [
     'darwin-x64',
-    'linux-ia32',
+    'darwin-arm64',
     'linux-x64',
     'win32-ia32',
     'win32-x64',
