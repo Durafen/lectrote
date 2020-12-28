@@ -6,7 +6,7 @@ const Story = require('./inkjs/ink.min.js').Story;
 var story = null;
 /* Short string which will (hopefully) be unique per game. */
 var signature = null;
-/* Global taqgs. */
+/* Global tags. */
 var metadata = {};
 
 /* We need to distinguish each turn's hyperlinks. */
@@ -180,6 +180,8 @@ function game_cycle()
 */
 function perform_autosave(clear)
 {
+    var Dialog = GlkOte.getlibrary('Dialog');
+    
     if (clear) {
         Dialog.autosave_write(signature, null);
         return;
@@ -226,6 +228,8 @@ var game_quit = false;
 
 function startup() 
 {
+    var Dialog = GlkOte.getlibrary('Dialog');
+    
     if (all_options.clear_vm_autosave) {
         Dialog.autosave_write(signature, null);
     }
