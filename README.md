@@ -3,9 +3,11 @@
 
 ### Fork Notes ###
 
-- auto competition with tab and shift tab.
-- History search with shift up and shift down.
-- [Download the latest Lectrote app with auto-competition][fork_releases]
+- Autocomplete with tab and shift tab keys.
+- History search and autocomplete with up and down arrows.
+- X command autocompleted (with tab button) to examine.
+- Less bright Dark theme.
+- [Download the latest Lectrote app with autocomplete][fork_releases]
 
 [fork_releases]: https://github.com/Durafen/lectrote/releases
 
