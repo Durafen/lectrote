@@ -46,10 +46,11 @@
 */
 
 function common_emglken_load(file, buf, opts) {
-    process.stdout.write("RL: common_emglken_load start\n");
+    process.stdout.write("RL: common_emglken_load start (loading " + file + ")\n");
     var engine = new (require(`./emglken/${file}.js`))();
-    
+    process.stdout.write("RL: common_emglken_load created engine\n");
     const data = Uint8Array.from(buf);
+    process.stdout.write("RL: common_emglken_load data created\n");
     const vm = opts.vm = window.engine = engine;
     opts.Dialog = window.Dialog;
     opts.Glk = opts.io = {
@@ -65,6 +66,8 @@ function common_emglken_load(file, buf, opts) {
     if (file === 'git' || file === 'glulxe') {
         opts.blorb_gamechunk_type = 'GLUL';
     }
+    
+    process.stdout.write("RL: common_emglken_load returning\n");
     return data;
 }
 
