@@ -11,6 +11,7 @@ const formats = require('./formats.js');
 
 function load_named_game(arg)
 {
+    process.stdout.write("RL: load_named_game start\n");
     const engine = formats.enginemap[arg.engine];
     if (!engine) {
         throw new Error('Unrecognized engine: ' + arg.engine);
@@ -18,7 +19,10 @@ function load_named_game(arg)
 
     var path = arg.path;
     var default_name = path_mod.basename(path);
+    
+    process.stdout.write("RL: load_named_game readFileSync start\n");
     var buf = fs.readFileSync(path);
+    process.stdout.write("RL: load_named_game readFileSync done\n");
     var load_options = { format:'array' };
 
     game_options.default_page_title = default_name;

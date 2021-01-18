@@ -46,7 +46,9 @@
 */
 
 function common_emglken_load(file, buf, opts) {
-    var engine = new ( require(`./emglken/${file}.js`) )();
+    process.stdout.write("RL: common_emglken_load start\n");
+    var engine = new (require(`./emglken/${file}.js`))();
+    
     const data = Uint8Array.from(buf);
     const vm = opts.vm = window.engine = engine;
     opts.Dialog = window.Dialog;

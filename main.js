@@ -177,14 +177,17 @@ function clear_window_offsets()
 /* Called only at app startup. */
 function load_prefs()
 {
+    process.stdout.write("RL: load_prefs start\n");
     try {
-        var prefsstr = fs.readFileSync(prefspath, { encoding:'utf8' });
+        var prefsstr = fs.readFileSync(prefspath, { encoding: 'utf8' });
+        process.stdout.write("RL: load_prefs readFileSync done\n");
         var obj = JSON.parse(prefsstr);
         for (var key in obj) {
             prefs[key] = obj[key];
         }
     }
     catch (ex) {
+        process.stdout.write("RL: load_prefs readFileSync exception: " + ex.message + "\n");
         /* console.error('load_prefs: unable to load preferences: %s: %s', prefspath, ex); */
     }
     
@@ -350,9 +353,13 @@ function invoke_app_hook(win, func, arg)
 */
 function game_file_discriminate(path)
 {
+    process.stdout.write("RL: game_file_discriminate start\n");
     var fd = fs.openSync(path, 'r');
+    process.stdout.write("RL: game_file_discriminate openSync\n");
     var buf = Buffer.alloc(16);
+    process.stdout.write("RL: game_file_discriminate Buffer.alloc\n");
     var len = fs.readSync(fd, buf, 0, 16, 0);
+    process.stdout.write("RL: game_file_discriminate readSync\n");
     fs.closeSync(fd);
 
     /* Try Blorbs first. */
@@ -398,11 +405,13 @@ function game_file_discriminate(path)
 function parse_blorb(path)
 {
     var res = null;
-
+    process.stdout.write("RL: parse_blorb start\n");
     var fd = fs.openSync(path, 'r');
+    process.stdout.write("RL: parse_blorb openSync\n");
     var buf = Buffer.alloc(16);
-
+    process.stdout.write("RL: parse_blorb Buffer.alloc\n");
     var len = fs.readSync(fd, buf, 0, 16, 0);
+    process.stdout.write("RL: parse_blorb fs.readSync\n");
     if (!(buf[0] == 0x46 && buf[1] == 0x4F && buf[2] == 0x52 && buf[3] == 0x4D
             && buf[8] == 0x49 && buf[9] == 0x46 && buf[10] == 0x52 && buf[11] == 0x53)) {
         /* not Blorb at all. */
@@ -410,13 +419,15 @@ function parse_blorb(path)
         return null;
     }
 
-    /* Search through the chunks for a Zcode/Glulx chunk. */
+/* Search through the chunks for a Zcode/Glulx chunk. */
+    process.stdout.write("RL: parse_blorb fs.readSync2\n");
     len = fs.readSync(fd, buf, 0, 12, 0);
-
+    process.stdout.write("RL: parse_blorb fs.readSync3\n");
     var filelen = buf.readUInt32BE(4) + 8;
     var pos = 12;
-
+    process.stdout.write("RL: parse_blorb fs.readSync4\n");
     while (pos < filelen) {
+        process.stdout.write("RL: parse_blorb fs.readSync inside loop\n");
         len = fs.readSync(fd, buf, 0, 8, pos);
         pos += 8;
         var chunktype = buf.toString('utf8', 0, 4);
@@ -430,7 +441,10 @@ function parse_blorb(path)
             pos++;
     }
 
+    process.stdout.write("RL: parse_blorb fs.readSync loop done\n");
     fs.closeSync(fd);
+    
+    process.stdout.write("RL: parse_blorb done\n");
     return res;
 }
 
